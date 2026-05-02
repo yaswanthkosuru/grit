@@ -24,8 +24,8 @@ export function YouTube({ raw }: { raw: string }) {
   }
 
   return (
-    <figure className="my-8 overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-[0_1px_0_0_rgba(30,64,175,0.04),0_24px_48px_-28px_rgba(15,23,42,0.18)]">
-      <div className="relative aspect-video w-full bg-slate-100">
+    <figure className="my-8 touch-pan-y overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-[0_1px_0_0_rgba(30,64,175,0.04),0_24px_48px_-28px_rgba(15,23,42,0.18)]">
+      <div className="relative aspect-video w-full touch-pan-y bg-slate-100">
         <iframe
           src={`https://www.youtube-nocookie.com/embed/${id}?rel=0`}
           title={title || "YouTube video"}
@@ -34,6 +34,7 @@ export function YouTube({ raw }: { raw: string }) {
           allowFullScreen
           referrerPolicy="strict-origin-when-cross-origin"
           className="absolute inset-0 h-full w-full border-0"
+          style={{ touchAction: "pan-y" }}
         />
       </div>
       {title && (

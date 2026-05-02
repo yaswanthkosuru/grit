@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getFlatNotes, getNote, getSyllabus } from "../../../lib/content";
-import { NoteContent } from "../../../components/NoteContent";
+import { MarkdownView } from "../../../components/MarkdownView";
 
 export async function generateStaticParams() {
   const sections = await getSyllabus();
@@ -42,45 +42,42 @@ export default async function NotePage({
           <div className="mt-5 h-[3px] w-16 rounded-full bg-blue-600" />
         </header>
 
-        <NoteContent
-          content={note.raw}
-          pager={
-            current && (current.prev || current.next) ? (
-              <nav className="mt-16 grid grid-cols-1 gap-3 border-t border-dashed border-blue-200 pt-6 sm:grid-cols-2">
-                {current.prev ? (
-                  <Link
-                    href={current.prev.href}
-                    className="group flex flex-col rounded-lg border border-blue-100 bg-white px-4 py-3 transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-[0_8px_24px_-12px_rgba(15,23,42,0.15)]"
-                  >
-                    <span className="font-handwritten text-[1rem] text-blue-600">
-                      ← previous
-                    </span>
-                    <span className="mt-1 truncate text-sm font-semibold text-slate-800 group-hover:text-blue-900">
-                      {current.prev.title}
-                    </span>
-                  </Link>
-                ) : (
-                  <div />
-                )}
-                {current.next ? (
-                  <Link
-                    href={current.next.href}
-                    className="group flex flex-col rounded-lg border border-blue-100 bg-white px-4 py-3 text-right transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-[0_8px_24px_-12px_rgba(15,23,42,0.15)] sm:col-start-2"
-                  >
-                    <span className="font-handwritten text-[1rem] text-blue-600">
-                      next →
-                    </span>
-                    <span className="mt-1 truncate text-sm font-semibold text-slate-800 group-hover:text-blue-900">
-                      {current.next.title}
-                    </span>
-                  </Link>
-                ) : (
-                  <div />
-                )}
-              </nav>
-            ) : null
-          }
-        />
+        <MarkdownView content={note.raw} />
+
+        {current && (current.prev || current.next) && (
+          <nav className="mt-16 grid grid-cols-1 gap-3 border-t border-dashed border-blue-200 pt-6 sm:grid-cols-2">
+            {current.prev ? (
+              <Link
+                href={current.prev.href}
+                className="group flex flex-col rounded-lg border border-blue-100 bg-white px-4 py-3 transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-[0_8px_24px_-12px_rgba(15,23,42,0.15)]"
+              >
+                <span className="font-handwritten text-[1rem] text-blue-600">
+                  ← previous
+                </span>
+                <span className="mt-1 truncate text-sm font-semibold text-slate-800 group-hover:text-blue-900">
+                  {current.prev.title}
+                </span>
+              </Link>
+            ) : (
+              <div />
+            )}
+            {current.next ? (
+              <Link
+                href={current.next.href}
+                className="group flex flex-col rounded-lg border border-blue-100 bg-white px-4 py-3 text-right transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-[0_8px_24px_-12px_rgba(15,23,42,0.15)] sm:col-start-2"
+              >
+                <span className="font-handwritten text-[1rem] text-blue-600">
+                  next →
+                </span>
+                <span className="mt-1 truncate text-sm font-semibold text-slate-800 group-hover:text-blue-900">
+                  {current.next.title}
+                </span>
+              </Link>
+            ) : (
+              <div />
+            )}
+          </nav>
+        )}
       </article>
     </div>
   );
