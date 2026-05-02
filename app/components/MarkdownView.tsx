@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import { Mermaid } from "./Mermaid";
 import { ConceptMap } from "./ConceptMap";
+import { YouTube } from "./YouTube";
 
 const components: Components = {
   h1: (props) => (
@@ -120,7 +121,7 @@ const components: Components = {
       child &&
       typeof child === "object" &&
       "props" in child &&
-      /language-(mermaid|concept-map)/.test(
+      /language-(mermaid|concept-map|youtube)/.test(
         (child as { props?: { className?: string } }).props?.className ?? ""
       );
     if (isCustomBlock) return <>{children}</>;
@@ -140,6 +141,9 @@ const components: Components = {
     }
     if (lang === "concept-map") {
       return <ConceptMap />;
+    }
+    if (lang === "youtube") {
+      return <YouTube raw={text} />;
     }
 
     const isInline = !lang && !text.includes("\n");
