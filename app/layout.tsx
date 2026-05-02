@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Caveat, Crimson_Pro, Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { Sidebar } from "./components/Sidebar";
 import { getSyllabus } from "./lib/content";
@@ -46,6 +48,8 @@ export default async function RootLayout({
           <Sidebar sections={sections} />
           <main className="min-w-0 flex-1">{children}</main>
         </div>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
