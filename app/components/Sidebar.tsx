@@ -77,7 +77,7 @@ export function Sidebar({ sections }: { sections: ContentSection[] }) {
               sadhinchu
             </span>
           </div>
-          <div className="mt-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-slate-500">
+          <div className="mt-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-slate-700">
             Python syllabus
           </div>
         </Link>
@@ -98,11 +98,11 @@ export function Sidebar({ sections }: { sections: ContentSection[] }) {
 
         {/* Progress */}
         <div className="border-t border-blue-200/60 px-6 py-4">
-          <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+          <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-700">
             <span>Progress</span>
             <span className="tabular-nums text-blue-700">
               {currentIndex >= 0 ? currentIndex + 1 : 0}{" "}
-              <span className="text-slate-400">/ {totalLessons}</span>
+              <span className="text-slate-600">/ {totalLessons}</span>
             </span>
           </div>
           <div className="mt-2 h-1 overflow-hidden rounded-full bg-blue-100">

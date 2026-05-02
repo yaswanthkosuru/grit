@@ -84,16 +84,18 @@ export function NoteContent({
             ))}
           </div>
 
-          <div className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+          <div className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-700">
             <span className="tabular-nums">
               <span className="text-blue-700">{revealed}</span>
-              <span className="text-slate-400"> / {total}</span>
+              <span className="text-slate-600"> / {total}</span>
             </span>
-            <span className="text-slate-300">·</span>
+            <span className="text-slate-400" aria-hidden>
+              ·
+            </span>
             <button
               type="button"
               onClick={() => setRevealed(total)}
-              className="text-slate-500 hover:text-blue-700 hover:underline"
+              className="text-slate-700 hover:text-blue-700 hover:underline"
             >
               show all
             </button>
@@ -120,7 +122,7 @@ export function NoteContent({
             </svg>
           </button>
 
-          <p className="font-handwritten text-[1rem] text-blue-600/70">
+          <p className="font-handwritten text-[1rem] text-blue-700">
             press space or → to continue
           </p>
         </div>
