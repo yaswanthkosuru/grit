@@ -1,0 +1,148 @@
+TITLE: Introduction to Python — Module 1 (Short Version)
+
+---
+
+[HOOK — 0:00]
+
+Hey! Welcome to Module 1 of Python.
+If you have never written a single line of code before, don't worry.
+In the next few minutes, you will know what Python is, why it is everywhere, how to install it, and you will even run your first program.
+Let's go.
+
+---
+
+[SECTION 1 — What is Python?]
+
+Python is a programming language.
+A programming language is just a way to give instructions to a computer.
+You speak English to people. You speak Python to computers. Simple.
+
+It was created by Guido van Rossum in 1991.
+Fun fact — it is NOT named after the snake. It is named after a British comedy show, Monty Python.
+
+Why do people love Python?
+One — it reads like English.
+Two — it is short. What takes 10 lines in other languages takes 2 lines here.
+Three — it is free.
+Four — a huge community. Help is one Google search away.
+
+---
+
+[SECTION 2 — Where is Python used?]
+
+Python is everywhere.
+
+Websites — Instagram, YouTube, Spotify, Reddit, Dropbox. All use Python.
+Data Science — cleaning data, making charts, finding patterns.
+Artificial Intelligence — ChatGPT, self-driving cars, face recognition. All Python.
+Automation — rename 500 files, send 100 emails, fill Excel sheets, all with a small script.
+And yes, even games.
+
+In short: Python can do almost anything.
+
+---
+
+[SECTION 3 — Install Python]
+
+Go to python.org/downloads and download the latest version.
+
+Windows users — very important — tick the box "Add Python to PATH" during install. Do not skip this.
+Mac and Linux users — you probably already have Python. Just open your terminal.
+
+To check if it worked, open the terminal or command prompt and type:
+  python --version
+or
+  python3 --version
+
+If you see a version number, you are ready.
+
+---
+
+[SECTION 4 — Pick an IDE]
+
+An IDE is just the app where you write code. Like Microsoft Word, but for programming.
+
+Three popular choices:
+VS Code — free, light, perfect for beginners. My top pick.
+PyCharm — powerful, built only for Python.
+Jupyter Notebook — best for data science and experimenting.
+
+If you are new, just go with VS Code. Install the Python extension from Microsoft, and you are done.
+
+---
+
+[SECTION 5 — The REPL]
+
+Open your terminal and type python (or python3).
+You will see three arrows: >>>
+That is the REPL. It is Python waiting for your command. Like a calculator on steroids.
+
+Try this:
+  2 + 2
+  print("Hello")
+
+The computer answers right away. Great for quick tests.
+To exit, just type exit().
+
+---
+
+[SECTION 6 — Your First Program]
+
+Tradition says your first program should print "Hello, World!"
+Let's do it.
+
+Open VS Code. Create a new file. Name it hello.py.
+The .py part is important — that tells the computer it is a Python file.
+
+Inside, type one line:
+  print("Hello, World!")
+
+Save it. Hit the Play button, or open a terminal and type:
+  python hello.py
+
+And boom — Hello, World! on your screen.
+
+You just wrote your first Python program.
+
+---
+
+[SECTION 7 — How .py files work]
+
+When you run a .py file:
+Python reads it top to bottom.
+Converts it into something the computer understands.
+Runs it.
+You see the output.
+
+That's it. You don't need to worry about the deep stuff yet.
+
+Two quick rules:
+Do not use spaces in file names. Use hello_world.py, not hello world.py.
+Do not start the name with a number.
+
+---
+
+[RECAP]
+
+Quick recap of Module 1:
+You know what Python is.
+You know where it is used.
+You installed it.
+You set up an IDE.
+You used the REPL.
+You wrote your first program.
+
+That is a huge first step.
+    
+---
+
+[NEXT + CTA]
+
+In Module 2, we talk about variables and data types — how to store numbers, text, and true-false values in Python.
+
+If this helped, hit like, subscribe, and I will see you in the next one.
+Happy coding!
+
+---
+
+[END]

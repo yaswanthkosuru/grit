@@ -1,0 +1,35 @@
+1
+00:00:00,000 --> 00:00:04,000
+Want to write your first line of code right now?
+
+2
+00:00:04,000 --> 00:00:08,000
+In Python, it takes one line. Let me show you.
+
+3
+00:00:08,000 --> 00:00:13,000
+Open any code editor. Create a file called hello.py.
+
+4
+00:00:13,000 --> 00:00:18,000
+Type this — print("Hello, World!") — and hit run.
+
+5
+00:00:18,000 --> 00:00:22,000
+That's it. You just wrote code.
+
+6
+00:00:22,000 --> 00:00:28,000
+Python runs websites, AI, data, automation —
+
+7
+00:00:28,000 --> 00:00:33,000
+basically anything you can do on a computer.
+
+8
+00:00:33,000 --> 00:00:40,000
+And it reads like English. You don't need a background.
+
+9
+00:00:40,000 --> 00:00:45,000
+Follow me. I'll teach you Python from zero.
