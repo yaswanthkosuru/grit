@@ -125,7 +125,7 @@ const components: Components = {
       );
     if (isCustomBlock) return <>{children}</>;
     return (
-      <pre className="my-5 overflow-x-auto rounded-lg bg-slate-900 px-5 py-4 text-[13.5px] leading-relaxed text-slate-100 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] ring-1 ring-slate-800/60">
+      <pre className="my-5 overflow-x-auto rounded-lg border border-blue-100 bg-[#f3efe2] px-5 py-4 text-[13.5px] leading-relaxed text-slate-900 shadow-[inset_3px_0_0_0_#1d4ed8]">
         {children}
       </pre>
     );
@@ -156,7 +156,7 @@ const components: Components = {
 
     return (
       <code
-        className={`${className ?? ""} font-mono text-[13.5px] leading-relaxed text-slate-100`}
+        className={`${className ?? ""} font-mono text-[13.5px] leading-relaxed text-slate-900`}
         {...props}
       >
         {children}
