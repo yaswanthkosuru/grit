@@ -15,7 +15,14 @@ function ensureInit() {
     theme: "base",
     fontFamily:
       'var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif',
-    flowchart: { htmlLabels: true, curve: "basis", padding: 18, nodeSpacing: 60, rankSpacing: 70 },
+    flowchart: {
+      htmlLabels: true,
+      curve: "basis",
+      padding: 22,
+      nodeSpacing: 70,
+      rankSpacing: 80,
+      diagramPadding: 18,
+    },
     mindmap: { padding: 22, maxNodeWidth: 260 },
     themeVariables: {
       background: "#ffffff",
@@ -108,7 +115,7 @@ function ensureInit() {
       quadrantInternalBorderStrokeFill: "#cbd5e1",
       quadrantExternalBorderStrokeFill: "#94a3b8",
       quadrantTitleFill: "#0f172a",
-      fontSize: "20px",
+      fontSize: "26px",
     },
   });
   initialized = true;
@@ -159,7 +166,7 @@ export function Mermaid({ chart }: { chart: string }) {
         ref={ref}
         className={`w-full text-center transition-opacity duration-300 ${
           ready ? "opacity-100" : "opacity-0"
-        } [&_svg]:mx-auto [&_svg]:h-auto [&_svg]:w-full [&_svg]:max-w-[900px]`}
+        } [&_svg]:mx-auto [&_svg]:h-auto [&_svg]:max-w-none`}
       />
     </figure>
   );
